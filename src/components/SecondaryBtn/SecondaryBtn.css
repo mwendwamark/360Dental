@@ -1,0 +1,69 @@
+.secondary_button {
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 10rem;
+  font-weight: var(--fw-semibold);
+  padding: 0.55rem 1.5rem;
+  padding-right: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s ease;
+  font-family: var(--pri_ff);
+  border: 1px solid transparent;
+}
+
+/* Specific styling for white variant to have a subtle border if needed or just clear BG */
+.secondary_button.white {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.secondary_button .secondary_button_icon_wrapper {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  color: var(--icon-color);
+  background-color: var(--icon-bg);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.secondary_button:hover {
+  background-color: var(--black_color);
+  color: var(--white_color);
+}
+
+.secondary_button:hover .secondary_button_icon_wrapper {
+  background-color: var(--white_color);
+  color: var(--black_color);
+}
+
+.secondary_button_icon_copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.secondary_button:hover .secondary_button_icon:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.secondary_button:hover .secondary_button_icon_copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
+}
+
+.secondary_button:active {
+  transform: scale(0.95);
+}

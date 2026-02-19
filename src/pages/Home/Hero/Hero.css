@@ -1,0 +1,271 @@
+.home_hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end; /* anchor content to bottom */
+}
+
+/* ── Background Image ── */
+.home_hero_bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.home_hero_bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* ── Overlay ── */
+.home_hero_overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(17, 40, 68, 0.85) 0%,
+    rgba(17, 40, 68, 0.4) 50%,
+    rgba(17, 40, 68, 0.1) 100%
+  );
+  z-index: 2;
+}
+
+/* ── Main Container ── */
+.home_hero_container {
+  position: relative;
+  z-index: 3;
+  color: var(--white_color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: flex-end;
+  width: 100%;
+  padding-bottom: 3.5rem;
+}
+
+/* ── Left Contents ── */
+.home_hero_left_contents {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.home_hero_left_contents p {
+  max-width: 520px;
+  opacity: 0.85;
+  line-height: var(--lh-body);
+  font-size: var(--fs-md);
+}
+
+/* ── Right Contents ── */
+.home_hero_right_contents {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+/* ── Floating Cards Row ── */
+.hero_floating_cards {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+/* ── Shared Card Base ── */
+.hero_card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.hero_card:hover {
+  transform: translateY(-6px);
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CARD 1 — Award Card
+   Image IS the background; text overlays it
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.hero_award_card {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  flex-shrink: 0;
+}
+
+.hero_card_img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero_card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* gradient over the image so text is readable */
+.hero_card_img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(17, 40, 68, 0.88) 0%,
+    rgba(17, 40, 68, 0.3) 55%,
+    transparent 100%
+  );
+}
+
+.hero_card_info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 1rem 1.1rem;
+  color: var(--_color);
+}
+
+.hero_card_info h3 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.01em;
+}
+
+.hero_card_info p {
+  font-size: 0.72rem;
+  opacity: 0.75;
+  letter-spacing: 0.02em;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CARD 2 — Dentist Profile Card
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.hero_dentist_card {
+  width: 160px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+}
+
+.hero_dentist_img {
+  width: 100%;
+  height: 175px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.hero_dentist_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero_dentist_info {
+  padding: 0.65rem 0.9rem 0.8rem;
+}
+
+.hero_dentist_info h4 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--black_color);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.verified_icon {
+  color: #00a3ff;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   RESPONSIVE — Tablet  (≤ 1024px)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+@media screen and (max-width: 1024px) {
+  .home_hero_container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .home_hero_right_contents {
+    width: 100%;
+    display: none;
+  }
+
+  .hero_card_img {
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   RESPONSIVE — Mobile  (≤ 640px)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+@media screen and (max-width: 640px) {
+  .home_hero {
+    height: 100svh; /* use svh on mobile to handle browser chrome */
+  }
+
+  .home_hero_container {
+    padding-bottom: 2.5rem;
+    gap: 1.5rem;
+  }
+
+  .home_hero_left_contents p {
+    font-size: var(--fs-sm);
+    width: 100%;
+  }
+
+  .hero_award_card {
+    width: 180px;
+    height: 190px;
+  }
+
+  .hero_dentist_card {
+    width: 135px;
+  }
+
+  .hero_dentist_img {
+    height: 145px;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   RESPONSIVE — Very small  (≤ 400px)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+@media screen and (max-width: 440px) {
+    .home_hero_right_contents{
+        display: block;
+    }
+  .hero_floating_cards {
+    gap: 0.75rem;
+  }
+
+  .hero_award_card {
+    width: 58%;
+    height: 170px;
+  }
+
+  .hero_dentist_card {
+    width: 38%;
+  }
+
+  .hero_dentist_img {
+    height: 128px;
+  }
+}

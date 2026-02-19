@@ -19,7 +19,7 @@
   --fs-h4: clamp(1.563rem, 1.4rem + 0.8vw, 1.8rem);
   --fs-h3: clamp(1.953rem, 1.7rem + 1vw, 2.2rem);
   --fs-h2: clamp(2.441rem, 2rem + 1.5vw, 2.8rem);
-  --fs-h1: clamp(3.052rem, 2.5rem + 2vw, 3.5rem);
+  --fs-h1: clamp(3.052rem, 2.5rem + 2vw, 4.5rem);
 
   /* FONT WEIGHTS */
   --fw-normal: 400;
@@ -85,7 +85,7 @@ button {
 }
 
 .container {
-  max-width: 92%;
+  max-width: 90%;
   margin: 0 auto;
   overflow-x: hidden;
   width: 100%;
@@ -116,7 +116,7 @@ button {
   line-height: var(--lh-heading);
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (min-width: 2000px) {
   .container {
     max-width: 2000px;
     margin: 0 auto;

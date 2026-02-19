@@ -75,7 +75,7 @@ const Navbar = () => {
           isScrolled ? "navbar-scrolled" : ""
         }`}
       >
-        <div className="container navbar_container">
+        <div className="navbar_container container">
           {/* Logo */}
           <Link to="/" className="navbar_logo" onClick={closeDrawer}>
             360Dental

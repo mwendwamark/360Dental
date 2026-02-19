@@ -5,20 +5,28 @@ import { MdArrowOutward } from "react-icons/md";
 const SecondaryBtn = ({ secBtnText, variant = "white" }) => {
   // Define default colors based on variants
   // For white variant: Button BG = white, Text = black, Icon = white, Icon BG = black/blue
-  const btnStyle =
-    variant === "white"
-      ? {
-          "--btn-bg": "var(--white_color)",
-          "--btn-text": "var(--black_color)",
-          "--icon-bg": "var(--blue_color)",
-          "--icon-color": "var(--white_color)",
-        }
-      : {
-          "--btn-bg": "var(--maroon_color)",
-          "--btn-text": "var(--white_color)",
-          "--icon-bg": "var(--white_color)",
-          "--icon-color": "var(--maroon_color)",
-        };
+  let btnStyle = {
+    "--btn-bg": "var(--white_color)",
+    "--btn-text": "var(--black_color)",
+    "--icon-bg": "var(--blue_color)",
+    "--icon-color": "var(--white_color)",
+  };
+
+  if (variant === "maroon") {
+    btnStyle = {
+      "--btn-bg": "var(--maroon_color)",
+      "--btn-text": "var(--white_color)",
+      "--icon-bg": "var(--white_color)",
+      "--icon-color": "var(--maroon_color)",
+    };
+  } else if (variant === "white-maroon") {
+    btnStyle = {
+      "--btn-bg": "var(--white_color)",
+      "--btn-text": "var(--black_color)",
+      "--icon-bg": "var(--maroon_color)",
+      "--icon-color": "var(--white_color)",
+    };
+  }
 
   return (
     <button className={`secondary_button ${variant}`} style={btnStyle}>

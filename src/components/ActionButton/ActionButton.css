@@ -1,0 +1,96 @@
+.btn {
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  font-family: var(--pri_ff);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-normal);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  border-radius: 50px;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+/* SOLID VARIANTS */
+.btn.solid.blue {
+  background-color: var(--blue_color);
+  color: var(--white_color);
+}
+.btn.solid.blue:hover {
+  background-color: transparent;
+  color: var(--blue_color);
+  border-color: var(--blue_color);
+}
+
+.btn.solid.maroon {
+  background-color: var(--maroon_color);
+  color: var(--white_color);
+}
+.btn.solid.maroon:hover {
+  background-color: transparent;
+  color: var(--maroon_color);
+  border-color: var(--maroon_color);
+}
+
+.btn.solid.light-blue {
+  background-color: var(--light_blue_color);
+  color: var(--white_color);
+}
+.btn.solid.light-blue:hover {
+  background-color: transparent;
+  color: var(--light_blue_color);
+  border-color: var(--light_blue_color);
+}
+
+.btn.solid.black {
+  background-color: var(--black_color);
+  color: var(--white_color);
+}
+.btn.solid.black:hover {
+  background-color: transparent;
+  color: var(--black_color);
+  border-color: var(--black_color);
+}
+
+/* OUTLINE VARIANTS */
+.btn.outline.blue {
+  background-color: transparent;
+  color: var(--blue_color);
+  border-color: var(--blue_color);
+}
+.btn.outline.blue:hover {
+  background-color: var(--blue_color);
+  color: var(--white_color);
+}
+
+.btn.outline.maroon {
+  background-color: transparent;
+  color: var(--maroon_color);
+  border-color: var(--maroon_color);
+}
+.btn.outline.maroon:hover {
+  background-color: var(--maroon_color);
+  color: var(--white_color);
+}
+
+.btn.outline.light-blue {
+  background-color: transparent;
+  color: var(--light_blue_color);
+  border-color: var(--light_blue_color);
+}
+.btn.outline.light-blue:hover {
+  background-color: var(--light_blue_color);
+  color: var(--white_color);
+}
+
+.btn.outline.black {
+  background-color: transparent;
+  color: var(--black_color);
+  border-color: var(--black_color);
+}
+.btn.outline.black:hover {
+  background-color: var(--black_color);
+  color: var(--white_color);
+}

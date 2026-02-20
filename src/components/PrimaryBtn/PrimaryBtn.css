@@ -9,14 +9,17 @@
   background-color: var(--clr);
   color: var(--white_color);
   border-radius: 10rem;
-  font-weight: var(--fw-semibold);
-  padding: 0.55rem 1.5rem;
+  font-weight: var(--fw-md);
+  padding: 0.75rem 1.5rem;
   padding-left: 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   transition: background-color 0.3s;
   font-family: var(--pri_ff);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-tight);
+  font-size: 12px;
 }
 
 .button_primary .button__icon-wrapper {

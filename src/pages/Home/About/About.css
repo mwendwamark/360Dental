@@ -1,0 +1,133 @@
+.home_about {
+  width: 100%;
+  background-color: var(--maroon_color);
+  color: var(--white_color);
+}
+
+.home_about_container {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.home_about_headers {
+  width: 100%;
+}
+
+.home_about_title_div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 80%;
+}
+
+.home_about_title em {
+  font-family: var(--sec_ff);
+  font-weight: var(--fw-medium);
+}
+
+.home_about_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 0.5rem;
+}
+
+.home_about_card {
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 4rem 2.5rem;
+  display: flex;
+  gap: 3.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  isolation: isolate;
+}
+
+.home_about_card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Left Column: Number and Icon */
+.home_about_card_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 140px;
+}
+
+.home_about_card_number {
+  font-family: var(--pri_ff);
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  opacity: 0.8;
+}
+
+.home_about_card_icon {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right Column: Title and Description */
+.home_about_card_right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.home_about_card_title_section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.home_about_card_title {
+  font-family: var(--pri_ff);
+  font-size: 1.8rem;
+  font-weight: var(--fw-semibold);
+  line-height: 1.2;
+}
+
+.home_about_card_line {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.home_about_card_description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1400px) {
+  .home_about_title_div {
+    max-width: 100%;
+  }
+
+  .home_about_container {
+    gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home_about_cards {
+    grid-template-columns: 1fr;
+  }
+
+  .home_about_container {
+    gap: 4rem;
+  }
+
+  .home_about_card {
+    padding: 2.5rem 2rem;
+    gap: 2rem;
+  }
+}

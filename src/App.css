@@ -1,25 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Niconne&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Niconne&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --blue_color: #112844;
   --light_blue_color: #197fa5;
   --white_color: #fff;
+  --white_alt: #fafafa;
   --maroon_color: #af245b;
   --text_color: #282727;
   --black_color: #141414;
 
   /* FONTS */
-  --pri_ff: "Raleway", sans-serif;
+  --pri_ff: "Inter", sans-serif;
   --sec_ff: "Niconne", cursive;
 
   /* FONT SIZES */
   --fs-base: clamp(1rem, 0.95rem + 0.2vw, 1rem);
-  --fs-sm: clamp(0.8rem, 0.78rem + 0.15vw, 0.9rem);
+  --fs-sm: 12px;
   --fs-md: var(--fs-base);
   --fs-lg: clamp(1.25rem, 1.15rem + 0.5vw, 1.4rem);
   --fs-h4: clamp(1.563rem, 1.4rem + 0.8vw, 1.8rem);
-  --fs-h3: clamp(1.953rem, 1.7rem + 1vw, 2.2rem);
-  --fs-h2: clamp(2.441rem, 2rem + 1.5vw, 2.8rem);
-  --fs-h1: clamp(3.052rem, 2.5rem + 2vw, 4.5rem);
+  --fs-h3: clamp(1.953rem, 1.7rem + 1vw, 2rem);
+  --fs-h2: clamp(2.441rem, 2rem + 1.5vw, 2.9rem);
+  --fs-h1: clamp(3.5rem, 2.5rem + 2vw, 5rem);
 
   /* FONT WEIGHTS */
   --fw-normal: 400;
@@ -85,35 +86,94 @@ button {
 }
 
 .container {
-  max-width: 90%;
+  max-width: 85%;
   margin: 0 auto;
   overflow-x: hidden;
   width: 100%;
 }
 
 .section {
-  padding: 8rem 0 8rem 0;
+  padding: 10rem 0 10rem 0;
 }
 
 .hero_styles {
   font-family: var(--pri_ff);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-semibold);
   font-size: var(--fs-h1);
   line-height: var(--lh-hero);
+  letter-spacing: var(--ls-tight);
 }
 
 .section_title {
   font-family: var(--pri_ff);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-medium);
   font-size: var(--fs-h2);
   line-height: var(--lh-heading);
+  letter-spacing: var(--ls-tighter);
+}
+
+.section_title.maroon {
+  color: var(--maroon_color);
+}
+
+.section_title.white {
+  color: var(--white_alt);
+}
+
+.section_title.blue {
+  color: var(--blue_color);
 }
 
 .sub_section_title {
   font-family: var(--pri_ff);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-medium);
   font-size: var(--fs-h3);
   line-height: var(--lh-heading);
+  letter-spacing: var(--ls-tighter);
+}
+
+.sub_section_title.maroon {
+  color: var(--maroon_color);
+}
+
+.sub_section_title.white {
+  color: var(--white_alt);
+}
+
+.sub_section_title.blue {
+  color: var(--blue_color);
+}
+
+.two_col_headers {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.small_section_badge {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+}
+
+.small_section_badge.maroon {
+  color: var(--maroon_color);
+}
+
+.small_section_badge.white {
+  color: var(--white_alt);
+}
+
+.small_section_badge.blue {
+  color: var(--blue_color);
+}
+
+.normal_text {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-normal);
+  line-height: var(--lh-body);
 }
 
 @media screen and (min-width: 2000px) {
@@ -121,5 +181,28 @@ button {
     max-width: 2000px;
     margin: 0 auto;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .section {
+    padding: 8rem 0 8rem 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .two_col_headers {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 94%;
   }
 }

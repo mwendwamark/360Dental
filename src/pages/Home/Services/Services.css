@@ -1,0 +1,101 @@
+.home_services {
+  width: 100%;
+  background-color: var(--white_alt);
+  color: var(--text_color);
+}
+
+.home_services_headers {
+  margin-bottom: 4rem;
+}
+
+.home_services_headers_left {
+  max-width: 600px;
+}
+
+.home_services_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.home_services_card {
+  background-color: var(--white_color);
+  padding: 1.875rem;
+  border-radius: 20px;
+  transition: var(--transition-slow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  cursor: pointer;
+}
+
+.home_services_card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.home_services_card:hover .home_services_card_title {
+  color: var(--maroon_color);
+}
+
+.home_services_card_icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white_alt);
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.home_services_card_icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.home_services_card_description {
+  font-size: var(--fs-md);
+  color: var(--text_color);
+  line-height: var(--lh-body);
+  opacity: 0.8;
+}
+
+.home_services_card_btn_wrapper {
+  margin-top: auto;
+}
+
+/* Hover effects for title and button together */
+.home_services_card:hover .home_services_card_title {
+  color: var(--maroon_color);
+}
+
+.home_services_card:hover .service_card_btn {
+  background-color: var(--maroon_color);
+  color: var(--white_color);
+  border-color: var(--maroon_color);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .home_services_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home_services_headers {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .home_services_cards {
+    grid-template-columns: 1fr;
+  }
+
+  .home_services_card {
+    padding: 2rem;
+  }
+}

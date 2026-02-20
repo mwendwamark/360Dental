@@ -1,6 +1,5 @@
 .navbar {
   position: fixed;
-
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -49,7 +48,7 @@
 /* Desktop Links */
 .navbar_links_desktop {
   display: none;
-  gap: clamp(1rem, 1vw, 2rem);
+  gap: 2rem;
   align-items: center;
 }
 
@@ -58,7 +57,9 @@
   font-weight: var(--fw-normal);
   font-family: var(--pri_ff);
   text-decoration: none;
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: -0.8px;
   position: relative;
   transition: color 0.3s ease;
 }

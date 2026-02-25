@@ -55,7 +55,7 @@ const Services = () => {
         <div className="home_services_headers two_col_headers">
           <div className="home_services_headers_left">
             <span className="small_section_badge maroon">our services</span>
-            <h2 className="section_title">
+            <h2 className="section_title blue">
               We are committed to providing a range of dental services.
             </h2>
           </div>
@@ -83,7 +83,7 @@ const Services = () => {
                   to={`/services#${service.title.toLowerCase().replace(/\s+/g, "-")}`}
                   variant="outline"
                   color="blue"
-                  className="service_card_btn"
+                  className="home_service_card_btn"
                 />
               </div>
             </div>

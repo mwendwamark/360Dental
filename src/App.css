@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Niconne&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --blue_color: #112844;
-  --light_blue_color: #197fa5;
+  --light_blue_color: #aae4fa;
   --white_color: #fff;
   --white_alt: #fafafa;
   --maroon_color: #af245b;
-  --text_color: #282727;
+  --text_color: #5e646d;
   --black_color: #141414;
 
   /* FONTS */
@@ -24,9 +24,9 @@
 
   /* FONT WEIGHTS */
   --fw-normal: 400;
-  --fw-medium: 500;
-  --fw-semibold: 600;
-  --fw-bold: 700;
+  --fw-medium: 400;
+  --fw-semibold: 500;
+  --fw-bold: 600;
   --fw-extrabold: 800;
 
   /* Line Heights */
@@ -36,8 +36,8 @@
 
   /* Letter Spacing */
   --ls-normal: 0;
-  --ls-tight: -0.02em;
-  --ls-tighter: -0.03em;
+  --ls-tight: -0.04em;
+  --ls-tighter: -0.05em;
 
   /* TRANSITIONS */
   --transition-fast: 0.15s ease;
@@ -154,7 +154,7 @@ button {
 
 .small_section_badge {
   font-size: var(--fs-md);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-medium);
   text-transform: uppercase;
 }
 

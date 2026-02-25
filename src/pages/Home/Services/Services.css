@@ -10,6 +10,9 @@
 
 .home_services_headers_left {
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .home_services_cards {
@@ -32,6 +35,10 @@
 .home_services_card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.home_services_card_title {
+  color: var(--blue_color);
 }
 
 .home_services_card:hover .home_services_card_title {
@@ -71,10 +78,10 @@
   color: var(--maroon_color);
 }
 
-.home_services_card:hover .service_card_btn {
-  background-color: var(--maroon_color);
-  color: var(--white_color);
-  border-color: var(--maroon_color);
+.home_services_card:hover .home_service_card_btn {
+  background-color: var(--blue_color) !important;
+  color: var(--white_color) !important;
+  border-color: var(--blue_color);
 }
 
 /* Responsive Styles */

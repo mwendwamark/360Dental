@@ -65,7 +65,7 @@
   align-items: center;
   align-self: flex-start; /* All capsules start at the same left position */
   width: fit-content;
-  border: 2px solid var(--light_blue_color);
+  /* border: 2px solid var(--light_blue_color); */
 }
 
 .home_testimonial_capsule img {
@@ -91,17 +91,17 @@
 
 .home_testimonial_card:nth-child(even) .home_testimonial_capsule {
   order: -1;
-  transform: translateY(-80%);
+  transform: translateY(-90%);
   margin-bottom: -1rem;
 }
 
 
 .home_testimonial_card:nth-child(odd) {
-  margin-bottom: 2.5rem; /* Space for the capsule hanging below */
+  margin-bottom: 2rem; /* Space for the capsule hanging below */
 }
 
 .home_testimonial_card:nth-child(odd) .home_testimonial_capsule {
-  transform: translateY(80%); /* Push capsule half-outside the bottom edge */
+  transform: translateY(90%); /* Push capsule half-outside the bottom edge */
   margin-top: -0.25rem;
 }
 

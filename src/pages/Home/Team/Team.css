@@ -1,0 +1,259 @@
+.our_team__desktop_layout,
+.our_team__tablet_lg_layout,
+.our_team__tablet_sm_layout,
+.our_team__mobile_layout {
+  display: none;
+}
+
+.our_team__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--white_color);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.our_team__card_img_wrap {
+  width: 100%;
+  aspect-ratio: 4.5 / 4.5;
+  overflow: hidden;
+}
+
+.our_team__card_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform var(--transition-slow);
+  border-radius: 12px;
+}
+
+.our_team__card:hover .our_team__card_img {
+  transform: scale(1.04);
+}
+
+.our_team__card_info {
+  padding: 0.85rem 0.2rem 0.4rem;
+}
+
+.our_team__card_name {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  color: var(--black_color);
+  line-height: 1.3;
+}
+
+.our_team__card_role {
+  font-size: var(--fs-md);
+  color: var(--text_color);
+  margin-top: 0.2rem;
+  font-weight: var(--fw-medium);
+}
+
+.our_team__badge {
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.our_team__heading {
+  margin-bottom: 0;
+}
+
+.our_team__join_card {
+  background-color: var(--white_alt);
+  border: 1px solid #e8eaed;
+  border-radius: 12px;
+  padding: 2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.our_team__join_icon {
+  display: flex;
+  align-items: center;
+}
+
+.our_team__join_title {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-medium);
+  color: var(--black_color);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-tight);
+}
+
+.our_team__join_text {
+  font-size: var(--fs-md);
+  color: var(--text_color);
+  line-height: var(--lh-body);
+}
+
+.our_team__join_btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.our_team__join_card_icon {
+  color: var(--maroon_color);
+}
+
+
+@media screen and (min-width: 1200px) {
+  .our_team__desktop_layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .our_team__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .our_team__header_col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.4rem;
+    padding-top: 0.5rem;
+  }
+
+ 
+  .our_team__row--bottom {
+    align-items: stretch;
+  }
+
+  .our_team__row--bottom .our_team__join_card {
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  /* On desktop, cards in row 1 should be same height */
+  .our_team__row--top {
+    align-items: start;
+  }
+}
+
+/* ============================================================
+   LARGE TABLET  947px – 1199px
+   Layout:
+     - Header (title left, button right) on same row
+     - 3 cards in a row
+     - 4th card full width
+     - Join card full width below
+   ============================================================ */
+@media screen and (min-width: 947px) and (max-width: 1199px) {
+  .our_team__tablet_lg_layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .our_team__tablet_lg_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+
+  .our_team__tablet_lg_row3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  /* 4th card full width — keep image aspect-ratio but cap height */
+  .our_team__tablet_lg_full .our_team__card {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .our_team__tablet_lg_full .our_team__card_img_wrap {
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    flex-shrink: 0;
+  }
+
+  /* override: full width card image fills the row */
+  .our_team__tablet_lg_full .our_team__card {
+    flex-direction: column;
+  }
+
+  .our_team__tablet_lg_full .our_team__card_img_wrap {
+    width: 100%;
+    aspect-ratio: 21 / 7;
+    max-height: 320px;
+  }
+
+  .our_team__tablet_lg_full .our_team__card_img {
+    object-position: center 20%;
+  }
+
+  /* Join card full width */
+  .our_team__tablet_lg_layout > .our_team__join_card {
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   SMALL TABLET  600px – 946px
+   Layout:
+     - Header (title left, button right)
+     - 2×2 grid of cards
+     - Join card full width at bottom
+   ============================================================ */
+@media screen and (min-width: 600px) and (max-width: 946px) {
+  .our_team__tablet_sm_layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .our_team__tablet_sm_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.5rem;
+  }
+
+  .our_team__tablet_sm_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .our_team__tablet_sm_layout > .our_team__join_card {
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   MOBILE  < 600px
+   Layout: single column, no grid
+   ============================================================ */
+@media screen and (max-width: 599px) {
+  .our_team__mobile_layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .our_team__mobile_header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .our_team__mobile_layout > .our_team__join_card {
+    width: 100%;
+  }
+}

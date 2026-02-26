@@ -19,7 +19,7 @@
   font-family: var(--pri_ff);
   text-transform: uppercase;
   letter-spacing: var(--ls-tight);
-  font-size: 12px;
+  font-size: var(--fs-sm);
 }
 
 .button_primary .button__icon-wrapper {

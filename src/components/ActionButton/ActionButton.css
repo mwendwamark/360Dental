@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  padding: 0.625rem 1.875rem;
+  padding: 0.75rem 1.5rem;
   font-family: var(--pri_ff);
   font-size: var(--fs-sm);
   font-weight: var(--fw-normal);
@@ -11,6 +11,7 @@
   border-radius: 50px;
   text-align: center;
   border: 1px solid transparent;
+  letter-spacing: var(--ls-tight);
 }
 
 /* SOLID VARIANTS */

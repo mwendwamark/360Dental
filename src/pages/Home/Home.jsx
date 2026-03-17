@@ -1,4 +1,5 @@
 import About from "./About/About";
+import BookingForm from "./Appointment/BookingForm";
 import Hero from "./Hero/Hero";
 import Services from "./Services/Services";
 import Team from "./Team/Team";
@@ -12,6 +13,7 @@ const Home = () => {
       <Services />
       <Team />
       <Testimonials />
+      <BookingForm />
     </div>
   );
 };

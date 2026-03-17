@@ -36,7 +36,6 @@ const Hero = () => {
           {/* Right — Floating Cards */}
           <div className="home_hero_right_contents">
             <div className="hero_floating_cards">
-
               {/* Card 1: Award — image IS the background */}
               <div className="hero_card hero_award_card">
                 <div className="hero_card_img">
@@ -59,7 +58,6 @@ const Hero = () => {
                   </h4>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

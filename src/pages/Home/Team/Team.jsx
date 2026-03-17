@@ -36,7 +36,7 @@ const teamMembers = [
 const JoinCard = () => (
   <div className="our_team__join_card">
     <div className="our_team__join_icon">
-      <LuUserRoundPlus size={60} className="our_team__join_card_icon"/>{" "}
+      <LuUserRoundPlus size={60} className="our_team__join_card_icon" />{" "}
     </div>
     <h3 className="our_team__join_title">Wanna be a part of our team?</h3>
     <p className="our_team__join_text">

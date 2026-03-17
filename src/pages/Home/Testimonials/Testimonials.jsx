@@ -71,7 +71,10 @@ const Testimonials = () => {
         </div>
 
         <div className="home_testimonial_footer">
-          <img src={B4_After} alt="Cleaning results before and after in 360 Dental" />
+          <img
+            src={B4_After}
+            alt="Cleaning results before and after in 360 Dental"
+          />
         </div>
       </div>
     </section>

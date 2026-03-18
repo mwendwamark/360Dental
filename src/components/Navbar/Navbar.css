@@ -20,7 +20,7 @@
 
 /* Scrolled State */
 .navbar-scrolled {
-  background: var(--blue_color);
+  background: rgba(17, 17, 17, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);

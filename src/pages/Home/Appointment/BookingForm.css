@@ -5,7 +5,7 @@
 
 /* ---------- LAYOUT ---------- */
 .booking__section {
-  padding: 8rem 0;
+  background-color: var(--white_alt);
 }
 
 .booking__wrapper {
@@ -45,7 +45,7 @@
 /* --- Right column (form card) --- */
 .booking__card {
   flex: 1.1;
-  background-color: var(--white_color);
+  background-color: var(--white_alt);
   border-radius: 16px;
   padding: 2.5rem 2.5rem 2rem;
   position: relative;
